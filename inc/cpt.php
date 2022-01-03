@@ -1,40 +1,34 @@
 <?php
-
 function add_cpt() {
-
-
-    $argsFunctionsCategories = [
+    $argsOffersCategories = [
         'labels' => [
-            'name' => 'Kategorie funkcji'
+            'name' => 'Kategorie ofert'
+        ],
+        'hierarchical' => false
+    ];
+    register_taxonomy('offer_categories', ['offers'], $argsOffersCategories);
+    $argsOffersSexCategories = [
+        'labels' => [
+            'name' => 'Kategorie ofert - dla kogo'
+        ],
+        'hierarchical' => false
+    ];
+    register_taxonomy('offer_sex_categories', ['offers'], $argsOffersSexCategories);
+    $argsOffersSizeCategories = [
+        'labels' => [
+            'name' => 'Kategorie rozmiary'
         ],
         'hierarchical' => true
     ];
-
-    register_taxonomy('function_categories', ['functions'], $argsFunctionsCategories);
-
-    $functionArgs=[
+    register_taxonomy('offer_size_categories', ['offers'], $argsOffersSizeCategories);
+    $offerArgs=[
         'labels' => [
-            'name' => 'Funkcje'
+            'name' => 'Oferty'
         ],
         'public' => true,
         'menu_icon' => 'dashicons-list-view',
-        'supports' => ['title', 'editor']
-        
+        'supports' => ['title']  
     ];
-
-    register_post_type('functions', $functionArgs);
-
-$testimonialsArgs=[
-    'labels' => [
-        'name' => 'Opinie'
-    ],
-    'public' => true,
-    'menu_icon' => 'dashicons-list-view',
-    'supports' => ['title', 'editor']
-    
-];
-
-register_post_type('testimonials', $testimonialsArgs);
+    register_post_type('offers', $offerArgs);
 }
-
 add_action('init', 'add_cpt');

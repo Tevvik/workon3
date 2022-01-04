@@ -18,7 +18,7 @@ function add_cpt() {
         'labels' => [
             'name' => 'Kategorie rozmiary'
         ],
-        'hierarchical' => true
+        'hierarchical' => false
     ];
     register_taxonomy('offer_size_categories', ['offers'], $argsOffersSizeCategories);
     $offerArgs=[

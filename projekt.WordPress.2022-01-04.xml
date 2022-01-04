@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-	<!-- generator="WordPress/5.8.2" created="2022-01-03 21:07" -->
+	<!-- generator="WordPress/5.8.2" created="2022-01-04 18:30" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>projekt</title>
 	<link>http://localhost/wordpress</link>
 	<description>Kolejna witryna oparta na WordPressie</description>
-	<pubDate>Mon, 03 Jan 2022 21:07:08 +0000</pubDate>
+	<pubDate>Tue, 04 Jan 2022 18:30:12 +0000</pubDate>
 	<language>pl-PL</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://localhost/wordpress</wp:base_site_url>
@@ -67,7 +67,7 @@
 		<wp:term>
 		<wp:term_id>3</wp:term_id>
 		<wp:term_taxonomy><![CDATA[offer_categories]]></wp:term_taxonomy>
-		<wp:term_slug><![CDATA[buty]]></wp:term_slug>
+		<wp:term_slug><![CDATA[shoes]]></wp:term_slug>
 		<wp:term_parent><![CDATA[]]></wp:term_parent>
 		<wp:term_name><![CDATA[Buty]]></wp:term_name>
 	</wp:term>
@@ -88,7 +88,7 @@
 		<wp:term>
 		<wp:term_id>2</wp:term_id>
 		<wp:term_taxonomy><![CDATA[offer_categories]]></wp:term_taxonomy>
-		<wp:term_slug><![CDATA[plaszcze]]></wp:term_slug>
+		<wp:term_slug><![CDATA[coats]]></wp:term_slug>
 		<wp:term_parent><![CDATA[]]></wp:term_parent>
 		<wp:term_name><![CDATA[Płaszcze]]></wp:term_name>
 	</wp:term>
@@ -103,49 +103,6 @@
 	<generator>https://wordpress.org/?v=5.8.2</generator>
 
 		<item>
-		<title><![CDATA[Witaj, świecie!]]></title>
-		<link>http://localhost/wordpress/2021/12/27/witaj-swiecie/</link>
-		<pubDate>Mon, 27 Dec 2021 15:56:31 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost/wordpress/?p=1</guid>
-		<description></description>
-		<content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>Witamy w WordPressie. To jest twój pierwszy wpis. Edytuj go lub usuń, a następnie zacznij pisać!</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>1</wp:post_id>
-		<wp:post_date><![CDATA[2021-12-27 16:56:31]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2021-12-27 15:56:31]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2021-12-27 16:56:31]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2021-12-27 15:56:31]]></wp:post_modified_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[witaj-swiecie]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="category" nicename="bez-kategorii"><![CDATA[Bez kategorii]]></category>
-						<wp:comment>
-			<wp:comment_id>1</wp:comment_id>
-			<wp:comment_author><![CDATA[Komentator WordPress]]></wp:comment_author>
-			<wp:comment_author_email><![CDATA[wapuu@wordpress.example]]></wp:comment_author_email>
-			<wp:comment_author_url>https://wordpress.org/</wp:comment_author_url>
-			<wp:comment_author_IP><![CDATA[]]></wp:comment_author_IP>
-			<wp:comment_date><![CDATA[2021-12-27 16:56:31]]></wp:comment_date>
-			<wp:comment_date_gmt><![CDATA[2021-12-27 15:56:31]]></wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Cześć, to jest komentarz.
-Aby zapoznać się z moderowaniem, edycją i usuwaniem komentarzy, należy odwiedzić ekran Komentarze w kokpicie.
-Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</a>.]]></wp:comment_content>
-			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
-			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-							</wp:comment>
-					</item>
-					<item>
 		<title><![CDATA[Przykładowa strona]]></title>
 		<link>http://localhost/wordpress/?page_id=2</link>
 		<pubDate>Mon, 27 Dec 2021 15:56:31 +0000</pubDate>
@@ -202,6 +159,22 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
 		<wp:meta_value><![CDATA[przykladowa-strona]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
+		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1641236127]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
+		<wp:meta_value><![CDATA[przykladowa-strona]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[Polityka prywatności]]></title>
@@ -230,6 +203,10 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
 		<wp:meta_value><![CDATA[default]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[Oferty]]></title>
@@ -243,8 +220,8 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:post_id>11</wp:post_id>
 		<wp:post_date><![CDATA[2022-01-03 19:00:48]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2022-01-03 18:00:48]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2022-01-03 21:21:41]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2022-01-03 20:21:41]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2022-01-04 12:32:46]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2022-01-04 11:32:46]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[group_61d338a34d4d1]]></wp:post_name>
@@ -255,6 +232,10 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
 														<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
 		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
 		<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
@@ -314,13 +295,13 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://localhost/wordpress/?post_type=acf-field&#038;p=22</guid>
 		<description></description>
-		<content:encoded><![CDATA[a:13:{s:4:"type";s:8:"taxonomy";s:12:"instructions";s:0:"";s:8:"required";i:1;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:8:"taxonomy";s:16:"offer_categories";s:10:"field_type";s:5:"radio";s:10:"allow_null";i:0;s:8:"add_term";i:0;s:10:"save_terms";i:0;s:10:"load_terms";i:0;s:13:"return_format";s:6:"object";s:8:"multiple";i:0;}]]></content:encoded>
+		<content:encoded><![CDATA[a:13:{s:4:"type";s:8:"taxonomy";s:12:"instructions";s:0:"";s:8:"required";i:1;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:8:"taxonomy";s:16:"offer_categories";s:10:"field_type";s:5:"radio";s:10:"allow_null";i:0;s:8:"add_term";i:0;s:10:"save_terms";i:1;s:10:"load_terms";i:1;s:13:"return_format";s:6:"object";s:8:"multiple";i:0;}]]></content:encoded>
 		<excerpt:encoded><![CDATA[category]]></excerpt:encoded>
 		<wp:post_id>22</wp:post_id>
 		<wp:post_date><![CDATA[2022-01-03 19:21:44]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2022-01-03 18:21:44]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2022-01-03 20:55:14]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2022-01-03 19:55:14]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2022-01-04 12:32:46]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2022-01-04 11:32:46]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[field_61d33e7775348]]></wp:post_name>
@@ -405,7 +386,7 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 														</item>
 					<item>
 		<title><![CDATA[Strona główna]]></title>
-		<link>http://localhost/wordpress/strona-glowna/</link>
+		<link>http://localhost/wordpress/</link>
 		<pubDate>Mon, 03 Jan 2022 18:51:22 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://localhost/wordpress/?page_id=29</guid>
@@ -434,6 +415,14 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
 		<wp:meta_value><![CDATA[home.php]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[home.php]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[Oferty]]></title>
@@ -447,8 +436,8 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:post_id>33</wp:post_id>
 		<wp:post_date><![CDATA[2022-01-03 19:56:52]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2022-01-03 18:56:52]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2022-01-03 19:56:52]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2022-01-03 18:56:52]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2022-01-04 11:52:40]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2022-01-04 10:52:40]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[oferty]]></wp:post_name>
@@ -459,6 +448,14 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
 														<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[page-offers.php]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
 		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
 		<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
@@ -510,6 +507,26 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
 		<wp:meta_value><![CDATA[oferta]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[single-offers.php]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
+		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1641242457]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
+		<wp:meta_value><![CDATA[oferta]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[Strona główna]]></title>
@@ -535,6 +552,10 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
 														<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
 		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
 		<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
@@ -602,6 +623,22 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
 		<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
+		<wp:meta_value><![CDATA[draft]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1641241160]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[Kurtka]]></title>
@@ -615,8 +652,8 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:post_id>48</wp:post_id>
 		<wp:post_date><![CDATA[2022-01-03 21:23:23]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2022-01-03 20:23:23]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2022-01-03 21:23:23]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2022-01-03 20:23:23]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2022-01-04 12:33:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2022-01-04 11:33:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[kurtka]]></wp:post_name>
@@ -626,7 +663,62 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:post_type><![CDATA[offers]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-														<wp:postmeta>
+										<category domain="offer_size_categories" nicename="36"><![CDATA[36]]></category>
+		<category domain="offer_categories" nicename="coats"><![CDATA[Płaszcze]]></category>
+		<category domain="offer_sex_categories" nicename="unisex"><![CDATA[Unisex]]></category>
+						<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[desc]]></wp:meta_key>
+		<wp:meta_value><![CDATA[zimowa ciepła kurtka]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_desc]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d33901b5f7e]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[picture]]></wp:meta_key>
+		<wp:meta_value><![CDATA[49]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_picture]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d33935b5f7f]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[category]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_category]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d33e7775348]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[price]]></wp:meta_key>
+		<wp:meta_value><![CDATA[50]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_price]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d34422ee77d]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[size]]></wp:meta_key>
+		<wp:meta_value><![CDATA[9]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_size]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d33f041f61e]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[sex]]></wp:meta_key>
+		<wp:meta_value><![CDATA[4]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_sex]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d33f321f61f]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
 		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
 		<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
@@ -712,6 +804,190 @@ Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</
 		<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1254;s:6:"height";i:1771;s:4:"file";s:27:"2022/01/EuwFe1JVgAYNRs_.jpg";s:5:"sizes";a:0:{}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
+					<item>
+		<title><![CDATA[buty]]></title>
+		<link>http://localhost/wordpress/offers/buty/</link>
+		<pubDate>Tue, 04 Jan 2022 11:22:09 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://localhost/wordpress/?post_type=offers&#038;p=64</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>64</wp:post_id>
+		<wp:post_date><![CDATA[2022-01-04 12:22:09]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2022-01-04 11:22:09]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2022-01-04 13:05:45]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2022-01-04 12:05:45]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[buty]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[offers]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="offer_categories" nicename="shoes"><![CDATA[Buty]]></category>
+						<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[desc]]></wp:meta_key>
+		<wp:meta_value><![CDATA[wygodne]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_desc]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d33901b5f7e]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[picture]]></wp:meta_key>
+		<wp:meta_value><![CDATA[49]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_picture]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d33935b5f7f]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[category]]></wp:meta_key>
+		<wp:meta_value><![CDATA[3]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_category]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d33e7775348]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[price]]></wp:meta_key>
+		<wp:meta_value><![CDATA[15]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_price]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d34422ee77d]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[size]]></wp:meta_key>
+		<wp:meta_value><![CDATA[9]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_size]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d33f041f61e]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[sex]]></wp:meta_key>
+		<wp:meta_value><![CDATA[5]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_sex]]></wp:meta_key>
+		<wp:meta_value><![CDATA[field_61d33f321f61f]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[login]]></title>
+		<link>http://localhost/wordpress/login/</link>
+		<pubDate>Tue, 04 Jan 2022 16:49:34 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://localhost/wordpress/?page_id=65</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>65</wp:post_id>
+		<wp:post_date><![CDATA[2022-01-04 17:49:34]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2022-01-04 16:49:34]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2022-01-04 17:49:34]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2022-01-04 16:49:34]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[login]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+														<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[page-login.php]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[Rejestracja]]></title>
+		<link>http://localhost/wordpress/rejestracja/</link>
+		<pubDate>Tue, 04 Jan 2022 17:06:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://localhost/wordpress/?page_id=68</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>68</wp:post_id>
+		<wp:post_date><![CDATA[2022-01-04 18:06:00]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2022-01-04 17:06:00]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2022-01-04 18:06:00]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2022-01-04 17:06:00]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[rejestracja]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+														<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[page-register.php]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title><![CDATA[Witaj, świecie!]]></title>
+		<link>http://localhost/wordpress/2021/12/27/witaj-swiecie/</link>
+		<pubDate>Mon, 27 Dec 2021 15:56:31 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://localhost/wordpress/?p=1</guid>
+		<description></description>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Witamy w WordPressie. To jest twój pierwszy wpis. Edytuj go lub usuń, a następnie zacznij pisać!</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>1</wp:post_id>
+		<wp:post_date><![CDATA[2021-12-27 16:56:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2021-12-27 15:56:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2021-12-27 16:56:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2021-12-27 15:56:31]]></wp:post_modified_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[witaj-swiecie]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="category" nicename="bez-kategorii"><![CDATA[Bez kategorii]]></category>
+						<wp:comment>
+			<wp:comment_id>1</wp:comment_id>
+			<wp:comment_author><![CDATA[Komentator WordPress]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[wapuu@wordpress.example]]></wp:comment_author_email>
+			<wp:comment_author_url>https://wordpress.org/</wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2021-12-27 16:56:31]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2021-12-27 15:56:31]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Cześć, to jest komentarz.
+Aby zapoznać się z moderowaniem, edycją i usuwaniem komentarzy, należy odwiedzić ekran Komentarze w kokpicie.
+Awatary komentujących pochodzą z <a href="https://pl.gravatar.com">Gravatara</a>.]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[comment]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+							</wp:comment>
+					</item>
 				</channel>
 </rss>
 	

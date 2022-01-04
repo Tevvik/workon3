@@ -10,28 +10,32 @@ $tax_criteria = [
         'terms'=>'coats'
     ]
 ];
-$price_min=10;
-$price_max=50;
+$price_min=0;
+$price_max=100;
+$searched='';
 $acf_criteria=[
     'relation'=>'AND',
     [
     'key'=>'price',
     'value'=>$price_max,
-    'compare'=>'<='
+    'compare'=>'<=',
+    'type'=>'NUMERIC'
     ],
     [
     'key'=>'price',
     'value'=>$price_min,
-    'compare'=>'>='
-    ]
+    'compare'=>'>=',
+    'type'=>'NUMERIC'
+    ],
+    'by_price'=>['key'=>'price'],
 ];
-    $query = new WP_Query( ['post_type'=>'offers', 'post_status'=>'publish', 'meta_query'=>$acf_criteria] );
+    $query = new WP_Query( ['s'=>$searched,'post_type'=>'offers', 'post_status'=>'publish', 'meta_query'=>$acf_criteria, 'orderby'=>['by_price'=>'DESC', 'title'=>'DESC', 'date'=>'DESC']] );
   
  if ( $query->have_posts() ) {
      echo '<ul>';
      while ( $query->have_posts() ) {
          $query->the_post();
-         echo '<li>' . get_the_title() . '</li>';
+         echo '<li>'.get_the_title().'<img src="'.get_field('picture').'" style="max-width:10rem;max-height:10rem;"/>'.'</li>';
      }
      echo '</ul>';
  } else {

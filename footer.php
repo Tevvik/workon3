@@ -31,16 +31,16 @@ $linkedin_ico='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fi
         </div>
         <div class="col-lg-4">
         <div class="footer--social">
-                    <?php if ($facebook_link) : ?>
-                        <a href="<?= $facebook_link ?>" target="_blank" title="Facebook"><?= $facebook_ico?></a>
+                    <?php if (get_theme_mod('facebook')) : ?>
+                        <a href="<?= get_theme_mod('facebook') ?>" target="_blank" title="Facebook"><?= $facebook_ico?></a>
                     <?php endif; ?>
 
-                    <?php if ($instagram_link) : ?>
-                        <a href="<?= $instagram_link ?>" target="_blank" title="Instagram"><?= $instagram_ico?></a>
+                    <?php if (get_theme_mod('instagram')) : ?>
+                        <a href="<?= get_theme_mod('instagram') ?>" target="_blank" title="Instagram"><?= $instagram_ico?></a>
                     <?php endif; ?>
 
-                    <?php if ($linkedin_link) : ?>
-                        <a href="<?= $linkedin_link ?>" target="_blank" title="LinkedIn"><?= $linkedin_ico?></a>
+                    <?php if (get_theme_mod('linkedin')) : ?>
+                        <a href="<?= get_theme_mod('linkedin') ?>" target="_blank" title="LinkedIn"><?= $linkedin_ico?></a>
                     <?php endif; ?>
                 </div>
         </div>

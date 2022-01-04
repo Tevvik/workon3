@@ -4,16 +4,17 @@ Template name: Strona główna
 */
 get_header();
 $slogan='Nie nosisz? Więc sprzedaj!';
-$ico_w_1='photo\buty-m.png';
-$ico_w_2='photo\buty-k.png';
-$ico_w_3='photo\akcesoria-w.png';
-$ico_w_4='photo\bluzy_i_swetry-k.png';
-$ico_w_5='photo\bluzka_i_tshirt-k.png';
-$ico_m_1='photo\kurtka-k.png';
-$ico_m_2='photo\buty-m.png';
-$ico_m_3='photo\akcesoria-m.png';
-$ico_m_4='photo\bluzy_i_swetry-m.png';
-$ico_m_5='photo\bluzka_i_tshirt-m.png';
+$path=get_template_directory_uri().'\\';
+$ico_w_1=$path.'photo\buty-m.png';
+$ico_w_2=$path.'photo\buty-k.png';
+$ico_w_3=$path.'photo\akcesoria-w.png';
+$ico_w_4=$path.'photo\bluzy_i_swetry-k.png';
+$ico_w_5=$path.'photo\bluzka_i_tshirt-k.png';
+$ico_m_1=$path.'photo\kurtka-k.png';
+$ico_m_2=$path.'photo\buty-m.png';
+$ico_m_3=$path.'photo\akcesoria-m.png';
+$ico_m_4=$path.'photo\bluzy_i_swetry-m.png';
+$ico_m_5=$path.'photo\bluzka_i_tshirt-m.png';
 ?>
 <div class="hero container">
     <h2>

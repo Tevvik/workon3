@@ -1,0 +1,59 @@
+.header{
+    text-align: center;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    a, span{
+        display: block;
+        background-color: lightgray;
+        padding: 0.5rem;
+    }
+}
+.offer-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    .single-offer{
+        display: flex;
+        flex-direction: column;
+        width: 45vw;
+        padding: 0.25rem;
+        margin: 1rem 0;
+        border-radius: 1vw;
+        text-decoration: none;
+        background-color: lightgray;
+        .offer-pic{
+            background-size:cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: block;
+            height: 50vw;
+            margin: 0.25rem 0;
+        }
+        .offer-title{
+            font-size: 0.85rem;
+            padding-top: 0.5rem;
+        }
+        span, .offer-title{
+            display: block;
+            margin: 0;
+            padding: 0 0.5rem;
+        }
+        .desc{
+            font-size: 0.75rem;
+            .price{
+                font-size: 1rem;
+                font-weight: bolder;
+            }
+            div{
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.6rem;
+
+            }
+        }
+    }
+}

@@ -1,28 +1,18 @@
 @import "variables";
-@import 'bootstrap';
 
-@import "bootstrap/scss/bootstrap";
+//@import "bootstrap/scss/bootstrap";
 
 
-@import "header";
-@import "start";
-@import "quote";
-@import "functions";
-@import "testimonials";
-@import "newsletter";
 @import "footer";
-@import "about-content";
-@import "news";
-@import "news-single";
-@import "contact";
-@import "functions-page";
+@import "offers-single";
+@import "offers-page";
+@import "home";
+@import "header";
 
-.btn-outline-primary {
-    background-color: rgba($white, .1);
-    color: $white;
+*{
+    padding: 0;
+    margin: 0;
 }
-
-
-.page-numbers {
-    @extend .page-link;
+a{
+    color: black;
 }

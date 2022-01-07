@@ -8,45 +8,46 @@ $instagram_ico='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" f
 $linkedin_ico='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
 <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
 </svg>';
+$phone_ico='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+</svg>';
+$email_ico='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+<path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+</svg>';
 ?>
-<div class="container-fluid bg-dark text-light">
-    <div class="row">
-        <div class="col-lg-4">
-            <span class="d-block">Kobieta:</span>
-            <a href="#" class="d-block">Płaszcze i kurtki</a>
-            <a href="#" class="d-block">Buty</a>
-            <a href="#" class="d-block">Akcesoria</a>
-            <a href="#" class="d-block">Bluzy i swetry</a>
-            <a href="#" class="d-block">Bluzki i T-shirty</a>
-            <span class="d-block">Mężczyzna:</span>
-            <a href="#" class="d-block">Płaszcze i kurtki</a>
-            <a href="#" class="d-block">Buty</a>
-            <a href="#" class="d-block">Akcesoria</a>
-            <a href="#" class="d-block">Bluzy i swetry</a>
-            <a href="#" class="d-block">Bluzki i T-shirty</a>
-        </div>
-        <div class="col-lg-4">
-            <a href="#"class="d-block">Polityka prywatności</a>
-            <a href="#"class="d-block">Regulamin</a>
-        </div>
-        <div class="col-lg-4">
+    <footer>
         <div class="footer--social">
-                    <?php if (get_theme_mod('facebook')) : ?>
-                        <a href="<?= get_theme_mod('facebook') ?>" target="_blank" title="Facebook"><?= $facebook_ico?></a>
-                    <?php endif; ?>
-
-                    <?php if (get_theme_mod('instagram')) : ?>
-                        <a href="<?= get_theme_mod('instagram') ?>" target="_blank" title="Instagram"><?= $instagram_ico?></a>
-                    <?php endif; ?>
-
-                    <?php if (get_theme_mod('linkedin')) : ?>
-                        <a href="<?= get_theme_mod('linkedin') ?>" target="_blank" title="LinkedIn"><?= $linkedin_ico?></a>
-                    <?php endif; ?>
-                </div>
+            <?php if (get_theme_mod('facebook')) : ?>
+                <a href="<?= get_theme_mod('facebook') ?>" target="_blank" title="Facebook"><?= $facebook_ico?></a>
+            <?php endif; ?>
+            <?php if (get_theme_mod('instagram')) : ?>
+                <a href="<?= get_theme_mod('instagram') ?>" target="_blank" title="Instagram"><?= $instagram_ico?></a>
+            <?php endif; ?>
+            <?php if (get_theme_mod('linkedin')) : ?>
+                <a href="<?= get_theme_mod('linkedin') ?>" target="_blank" title="LinkedIn"><?= $linkedin_ico?></a>
+            <?php endif; ?>
+        </div>
+        <div class="policies">
+            <a href="#">Polityka prywatności</a>
+            <a href="#">Regulamin</a>
+        </div>
+        <div class="contact">
+            <?php if (get_theme_mod('telephone')) : ?>
+                <a href="tel:<?= get_theme_mod('telephone') ?>" target="_blank" title="phone">
+                    Zadzwoń do nas:<br>
+                    <?= $phone_ico?> <?= get_theme_mod('telephone') ?>
+                </a>
+            <?php endif; ?>
+            <?php if (get_theme_mod('email')) : ?>
+                <a href="mailto:<?= get_theme_mod('email') ?>" target="_blank" title="email">
+                    Napisz do nas:<br>
+                    <?= $email_ico?> <?= get_theme_mod('email') ?>
+                </a>
+            <?php endif; ?>
         </div>
         <hr>
-        <a href="#" class="text-muted">Workon</a>
-    </div>
+        <a href="#" class="">Workon 2022</a>
+    </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <?php wp_footer(); ?>

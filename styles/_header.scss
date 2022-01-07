@@ -126,9 +126,9 @@ header{
             &--confirm{
                 display: flex;
                 justify-content: center;
-                padding-bottom: 1rem;
+                padding: 0 1rem 1rem 1rem;
                 a{
-                    width: 90%;
+                    width: 100%;
                     text-align: center;
                     background-color: lightgray;
 
@@ -147,7 +147,7 @@ header{
             &--price{
                 //display:none;
                 display: flex;
-                align-items: center;
+                justify-content: center;
                 .pair{
                     display: flex;
                     justify-content: center;

@@ -4,7 +4,8 @@
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 1rem;
-    h3{
+    h3,h4{
+        width: 100%;
         padding: 1rem;
         text-align: center;
     }
@@ -30,17 +31,18 @@
     align-items: center;
     .background{
         height: 30vh;
-        width: 100vw;
+        width: 100%;
         background-image: url('../images/background.jpg');
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
     }
     .slogan{
+        padding: 1rem;
         width: 80vw;
         margin: 1rem 10vw;
-        padding: 1rem;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(153, 153, 153, 0.5);
+        box-shadow: 0 0 1rem darkgray;
         border-radius: 2vw;
         h1{
             margin: 0.5rem 0.5rem 1.5rem 0.5rem;
@@ -49,6 +51,7 @@
             display: block;
             padding: 0.5rem 1rem;
             margin: 0.5rem 0;
+            text-align: center;
             text-decoration: none;
             color: black;
             background-color: darkgray;
@@ -65,7 +68,49 @@
         text-align: center;
         display: block;
         width: 100vw;
-        margin: 2rem 0 0 1rem;
+        margin: 0.5rem;
     }
 
+}
+@media(min-width:1000px){
+    .hero{
+        height: 60vh;
+        position: relative;
+        margin: 0 10%;
+        .background{
+            height: 100%;
+        }
+        .slogan{
+            position: absolute;
+            left: 5%;
+            bottom: 10%;
+            width: 40%;
+            max-height: 60%;
+            margin: 0;
+            &-buttons{
+                display: flex;
+                justify-content: space-evenly;
+                a{
+                    width: 40%;
+                }
+            }
+        }
+    }
+    .categories{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0 10%;
+        h3,h4{
+            width: 100%;
+        }
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem;
+            width: 40%;
+            border-radius: 2rem;
+            box-shadow: 0 0 1rem darkgray;
+        }
+    }
 }

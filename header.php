@@ -30,9 +30,9 @@
                 <?php wp_head();?>
         </head>
         <body>
-                <header>
+                <header class="mobile">
                         <nav class="navigation">
-                                <a class="" href="#"><?=$logo?>LOGO</a>
+                                <a class="logo" href="#"><?=$logo?>LOGO</a>
                                 <div class="navigation-items">
                                         <a href="#" class="" role="button"><?=$user_ico?></a></a>
                                         <a href="#" class="" role="button">
@@ -55,20 +55,20 @@
                                 <a href="#" class="filter">Filtry <?=$filter_ico?></a>
                         </div>
                         <form class="category-select">
-                                <input type="checkbox" name="category" id="women">
-                                <label for="women">Kobieta</label>
-                                <input type="checkbox" name="category" id="men">
-                                <label for="men">Mężczyzna</label>
+                                <?php/* DYNAMICZNE WYŚWIETLANIE KATEGORII OFERT*/ ?>
+                                        <?php foreach (get_terms(['taxonomy'=>'offers','hide_empty' => false,'fields'=>'names','parent'=>'0']) as $taxonomy) :?>
+                                                <input type="checkbox" name="category" id="<?=$taxonomy?>">
+                                                <label for="$taxonomy"><?=$taxonomy?></label>
+                                        <?php endforeach;?>
                                 <div class="women">
                                         <a href="" class="header">Kobieta</a>
                                         <input type="checkbox" name="category" id="Wszystkie">
                                         <label for="Wszystkie">Wszystkie</label>
-                                        <input type="checkbox" name="category" id="Kurtki">
-                                        <label for="kurtki">Kurtki</label>
-                                        <input type="checkbox" name="category" id="Buty">
-                                        <label for="Buty">Buty</label>
-                                        <input type="checkbox" name="category" id="t-shirty">
-                                        <label for="t-shirty">t-shirty</label>
+                                        <?php/* NIE DZIAŁA!!! DYNAMICZNE WYŚWIETLANIE PODKATEGORII OFERT*/ ?>
+                                        <?php foreach (get_terms(['taxonomy'=>'offers','child_of' => 'k', 'hide_empty' => false,'fields'=>'names']) as $taxonomy) :?>
+                                                <input type="checkbox" name="category" id="<?=$taxonomy?>">
+                                                <label for="$taxonomy"><?=$taxonomy?></label>
+                                        <?php endforeach;?>
                                 </div>
                                 <div class="category-select--confirm">
                                         <a class="">Przeglądaj</a>
@@ -76,17 +76,17 @@
                         </form>
                         <div class="filters">
                                 <div class="filters-select">
-                                        <a class="">Cena</a>
-                                        <a class="">Rozmiar</a>
-                                        <a class="">Marka</a>
-                                        <a class="">Stan</a>
-                                        <a class="">Styl</a>
+                                        <a id="price">Cena</a>
+                                        <?php foreach (get_taxonomies(['desc'=>'filters'], 'objects') as $term) :?>
+                                                <?php $term = $term->labels->name?>
+                                                <a id="<?=$term?>"><?=$term?></a>
+                                        <?php endforeach;?>
                                 </div>
                                 <div class="filters-select--price">
                                         <div class="pair">
-                                                <input type="number" name="min" vaule="<?=$price_min?>">
+                                                <input type="number" name="min" vaule="<?=$price_min?>" placeholder="Od">
                                                 <span> - </span>
-                                                <input type="number" name="max" value="<?=$price_max?>">
+                                                <input type="number" name="max" value="<?=$price_max?>" placeholder="do">
                                         </div>
                                 </div>
                                 <div class="filters-select--used">
@@ -96,20 +96,16 @@
                                         <label for="new">Nowe</label>
                                 </div>
                                 <div class="filters-select--style">
-                                        <input type="checkbox" name="style" id="casual" vaule="casual">
-                                        <label for="casual">Casual</label>
-                                        <input type="checkbox" name="style" id="vintage" value="vintage">
-                                        <label for="vintage">Vintage</label>
-                                        <input type="checkbox" name="style" id="street" value="street">
-                                        <label for="street">Street</label>
+                                        <?php foreach (get_terms(['taxonomy'=>'filter_style','hide_empty' => false,'fields'=>'names']) as $term) :?>
+                                                <input type="checkbox" name="style" id="<?=$term?>" value="<?=$term?>">
+                                                <label for="<?=$term?>"><?=$term?></label>
+                                        <?php endforeach;?>
                                 </div>
                                 <div class="filters-select--size">
-                                        <input type="checkbox" name="size" id="xs" vaule="xs">
-                                        <label for="xs">XS</label>
-                                        <input type="checkbox" name="size" id="s" value="s">
-                                        <label for="s">S</label>
-                                        <input type="checkbox" name="size" id="m" value="m">
-                                        <label for="m">M</label>
+                                        <?php foreach (get_terms(['taxonomy'=>'filter_sizes','hide_empty' => false,'fields'=>'names']) as $term) :?>
+                                                <input type="checkbox" name="style" id="<?=$term?>" value="<?=$term?>">
+                                                <label for="<?=$term?>"><?=$term?></label>
+                                        <?php endforeach;?>
                                 </div>
                                 <div class="filters-select--confirm">
                                         <a href="">
@@ -129,5 +125,23 @@
                                         </div>
                                 </div>
                         </div>
+                </header>
+                <header class="wide">
+                        <nav class="navigation">
+                                <a class="logo" href="#"><?=$logo?>LOGO</a>
+                                <div class="navigation-items">
+                                        <div class="search">
+                                                <form class="" method="GET" action="../oferty">
+                                                        <input type=submit id="send">
+                                                        <input class="" type="text" name="search" placeholder="Czego praginiesz?">
+                                                        <label class="" for="send"><?=$search_ico?></label>
+                                                </form>
+                                        </div>
+                                        <a href="#" class="" role="button"><?=$user_ico?></a></a>
+                                        <a href="#" class="" role="button">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16"><path fill-rdive="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/></svg>
+                                        </a>
+                                </div>
+                        </nav>
                 </header>
                 

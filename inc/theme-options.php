@@ -59,9 +59,9 @@ Kirki::add_section('contact_info', [
     'priority' => 300
 ]);
 
-Kirki::add_field('telefon', [
+Kirki::add_field('telephone', [
     'type' => 'text',
-    'settings' => 'telefon',
+    'settings' => 'telephone',
     'label' => 'Telefon',
     'section' => 'contact_info',
     'default' => '',

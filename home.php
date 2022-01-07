@@ -21,13 +21,24 @@ $ico_m_5=$path.'photo\bluzka_i_tshirt-m.png';
     </div>
     <div class="slogan">
         <h1><?=$slogan?></h1>
-        <a href="">Sprzedaj teraz</a>
-        <a href="">O nas</a>
+        <div class="slogan-buttons">
+            <a href="">Sprzedaj teraz</a>
+            <a href="">O nas</a>
+        </div>
     </div>
 </div>
 <div class="categories">
     <h3>Kategorie</h3>
         <div class="women">
+            <h4>Kobiety</h4>
+                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_1?>">Płaszcze i kurtki</a>
+                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_2?>">Buty</a>
+                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_3?>">Akcesoria</a>
+                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_4?>">Bluzy i swetry</a>
+                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_5?>">Bluzki i T-shirty</a>
+        </div>
+        <div class="men">
+            <h4>Mężczyźni</h4>
                 <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_1?>">Płaszcze i kurtki</a>
                 <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_2?>">Buty</a>
                 <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_3?>">Akcesoria</a>

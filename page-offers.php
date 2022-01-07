@@ -3,10 +3,21 @@
 Template name: Oferty
 */
 get_header();
-
-$category='coats';
-$price_min=0;
-$price_max=100;
+if(isset($_GET['category'])){
+    $category = [
+        [
+            'taxonomy'=>'offers',
+            'field'=>'slug',
+            'terms'=>$_GET['category']
+        ]
+    ];
+}
+else{
+    $category=null;
+}
+$price_min = (isset($_GET['min'])) ? $_GET['min'] : 0;
+//DO ZROBIENIA ZEBY POBIERALO NAJWIEKSZA CENE JAKA JEST
+$price_max = (isset($_GET['min'])) ? $_GET['min'] : 1000;
 $searched= (isset($_GET['search'])) ? $_GET['search'] : '';
 $acf_criteria=[
     'relation'=>'AND',
@@ -24,23 +35,14 @@ $acf_criteria=[
     ],
     'by_price'=>['key'=>'price'],
 ];
+$order = (isset($_GET['order'])) ? $_GET['order'] : ['date'=>'DESC'];
 $query = new WP_Query([
     's'=>$searched,
     'post_type'=>'offers',
     'post_status'=>'publish',
     'meta_query'=>$acf_criteria,
-    'tax_query'=> [
-        [
-            'taxonomy'=>'offer_categories',
-            'field'=>'slug',
-            'terms'=>$category
-        ]
-        ],
-    'orderby'=>[
-        'by_price'=>'DESC',
-        'title'=>'DESC',
-        'date'=>'DESC'
-    ],
+    'orderby'=>$order,
+    'tax_query'=> $category,
     'posts_per_page' => 20,
     'paged' => get_query_var('paged'),
 ]);

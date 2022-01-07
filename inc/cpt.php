@@ -4,23 +4,41 @@ function add_cpt() {
         'labels' => [
             'name' => 'Kategorie ofert'
         ],
-        'hierarchical' => false
+        'public'=>true,
+        'hierarchical' => true
     ];
-    register_taxonomy('offer_categories', ['offers'], $argsOffersCategories);
-    $argsOffersSexCategories = [
+    register_taxonomy('offers', ['offers'], $argsOffersCategories);
+
+    $argsOffersFileterSizes = [
         'labels' => [
-            'name' => 'Kategorie ofert - dla kogo'
+            'name' => 'Rozmiary'
         ],
+        'desc'=>'filters',
+        'public'=>true,
         'hierarchical' => false
     ];
-    register_taxonomy('offer_sex_categories', ['offers'], $argsOffersSexCategories);
-    $argsOffersSizeCategories = [
+    register_taxonomy('filter_sizes', ['offers'], $argsOffersFileterSizes);
+
+    $argsFilterStyles = [
         'labels' => [
-            'name' => 'Kategorie rozmiary'
+            'name' => 'Style'
         ],
+        'desc'=>'filters',
+        'public'=>true,
         'hierarchical' => false
     ];
-    register_taxonomy('offer_size_categories', ['offers'], $argsOffersSizeCategories);
+    register_taxonomy('filter_style', ['offers'], $argsFilterStyles);
+
+    $argsFilterBrand = [
+        'labels' => [
+            'name' => 'Marka'
+        ],
+        'desc'=>'filters',
+        'public'=>true,
+        'hierarchical' => false
+    ];
+    register_taxonomy('filter_brand', ['offers'], $argsFilterBrand);
+
     $offerArgs=[
         'labels' => [
             'name' => 'Oferty'

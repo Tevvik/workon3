@@ -1,4 +1,5 @@
 <?php 
+include get_template_directory() . '/inc/cpt.php';
 
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('main', get_template_directory_uri() . '/dist/main.css', [], '1.0.0');
@@ -26,4 +27,3 @@ add_user_meta(1,'phone_num','666099000');
 
 
 include get_template_directory() . '/inc/theme-options.php';
-include get_template_directory() . '/inc/cpt.php';

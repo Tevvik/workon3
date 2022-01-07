@@ -16,37 +16,41 @@ $email_ico='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=
 </svg>';
 ?>
     <footer>
-        <div class="footer--social">
-            <?php if (get_theme_mod('facebook')) : ?>
-                <a href="<?= get_theme_mod('facebook') ?>" target="_blank" title="Facebook"><?= $facebook_ico?></a>
-            <?php endif; ?>
-            <?php if (get_theme_mod('instagram')) : ?>
-                <a href="<?= get_theme_mod('instagram') ?>" target="_blank" title="Instagram"><?= $instagram_ico?></a>
-            <?php endif; ?>
-            <?php if (get_theme_mod('linkedin')) : ?>
-                <a href="<?= get_theme_mod('linkedin') ?>" target="_blank" title="LinkedIn"><?= $linkedin_ico?></a>
-            <?php endif; ?>
+        <div>
+            <div class="social">
+                <?php if (get_theme_mod('facebook')) : ?>
+                    <a href="<?= get_theme_mod('facebook') ?>" target="_blank" title="Facebook"><?= $facebook_ico?></a>
+                <?php endif; ?>
+                <?php if (get_theme_mod('instagram')) : ?>
+                    <a href="<?= get_theme_mod('instagram') ?>" target="_blank" title="Instagram"><?= $instagram_ico?></a>
+                <?php endif; ?>
+                <?php if (get_theme_mod('linkedin')) : ?>
+                    <a href="<?= get_theme_mod('linkedin') ?>" target="_blank" title="LinkedIn"><?= $linkedin_ico?></a>
+                <?php endif; ?>
+            </div>
+            <div class="policies">
+                <a href="#">Polityka prywatności</a>
+                <a href="#">Regulamin</a>
+            </div>
+            <div class="contact">
+                <?php if (get_theme_mod('telephone')) : ?>
+                    <a href="tel:<?= get_theme_mod('telephone') ?>" target="_blank" title="phone">
+                        Zadzwoń do nas:<br>
+                        <?= $phone_ico?> <?= get_theme_mod('telephone') ?>
+                    </a>
+                <?php endif; ?>
+                <?php if (get_theme_mod('email')) : ?>
+                    <a href="mailto:<?= get_theme_mod('email') ?>" target="_blank" title="email">
+                        Napisz do nas:<br>
+                        <?= $email_ico?> <?= get_theme_mod('email') ?>
+                    </a>
+                <?php endif; ?>
+            </div>
         </div>
-        <div class="policies">
-            <a href="#">Polityka prywatności</a>
-            <a href="#">Regulamin</a>
+        <div class="end">
+            <hr>
+            <a href="#" class="">Workon 2022</a>
         </div>
-        <div class="contact">
-            <?php if (get_theme_mod('telephone')) : ?>
-                <a href="tel:<?= get_theme_mod('telephone') ?>" target="_blank" title="phone">
-                    Zadzwoń do nas:<br>
-                    <?= $phone_ico?> <?= get_theme_mod('telephone') ?>
-                </a>
-            <?php endif; ?>
-            <?php if (get_theme_mod('email')) : ?>
-                <a href="mailto:<?= get_theme_mod('email') ?>" target="_blank" title="email">
-                    Napisz do nas:<br>
-                    <?= $email_ico?> <?= get_theme_mod('email') ?>
-                </a>
-            <?php endif; ?>
-        </div>
-        <hr>
-        <a href="#" class="">Workon 2022</a>
     </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

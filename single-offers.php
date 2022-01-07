@@ -2,13 +2,6 @@
 get_header();
 $author=get_userdata($post->post_author);
 /*Template name: Oferta*/
-//$post = get_post();
-//$post->post_title;
-//$post->post_date;
-//get_field('price');
-//get_field('desc');
-//$author->phone_num;
-//$author->user_email;
 ?>
 <section class="offers-single">
         <div class="gallery">

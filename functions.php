@@ -3,11 +3,7 @@ include get_template_directory() . '/inc/cpt.php';
 
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('main', get_template_directory_uri() . '/dist/main.css', [], '1.0.0');
-<<<<<<< HEAD
-    wp_enqueue_script('main', get_template_directory_uri() . '/dist/main.js', ['jquery'], '1.0', true);
-=======
     wp_enqueue_script('main', get_template_directory_uri() . '/dist.main.js', ['jquery'], '1.0', true);
->>>>>>> 490187b8c08829ee9d3498e4a33c6e87848d7b47
 
     wp_localize_script('main', 'page', [
         'url' => get_home_url(),

@@ -276,6 +276,11 @@ footer a {
     border-radius: 2rem;
     box-shadow: 0 0 1rem darkgray;
   }
+
+  .extra {
+    margin: 0 10%;
+    color: blue;
+  }
 }
 header.wide {
   display: none;

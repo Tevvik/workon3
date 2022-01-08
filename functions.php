@@ -3,7 +3,11 @@ include get_template_directory() . '/inc/cpt.php';
 
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('main', get_template_directory_uri() . '/dist/main.css', [], '1.0.0');
+<<<<<<< HEAD
     wp_enqueue_script('main', get_template_directory_uri() . '/dist/main.js', ['jquery'], '1.0', true);
+=======
+    wp_enqueue_script('main', get_template_directory_uri() . '/dist.main.js', ['jquery'], '1.0', true);
+>>>>>>> 490187b8c08829ee9d3498e4a33c6e87848d7b47
 
     wp_localize_script('main', 'page', [
         'url' => get_home_url(),
@@ -24,6 +28,12 @@ add_action('after_setup_theme', function () {
 
 add_theme_support('post-thumbnails');
 add_user_meta(1,'phone_num','666099000');
+
+function my_login_stylesheet() { 
+    wp_enqueue_style( 'niestandardowe logowanie', get_stylesheet_directory_uri() . '/style-login.css' ); 
+    wp_enqueue_script('custom-login', get_stylesheet_directory_uri(). '/style-login.js' ); 
+} 
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' ); 
 
 
 include get_template_directory() . '/inc/theme-options.php';

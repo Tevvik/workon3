@@ -76,7 +76,6 @@
     .hero{
         height: 60vh;
         position: relative;
-        margin: 0 10%;
         .background{
             height: 100%;
         }
@@ -99,7 +98,6 @@
     .categories{
         flex-direction: row;
         justify-content: space-evenly;
-        margin: 0 10%;
         h3,h4{
             width: 100%;
         }
@@ -112,9 +110,5 @@
             border-radius: 2rem;
             box-shadow: 0 0 1rem darkgray;
         }
-    }
-    .extra{
-        margin: 0 10%;
-        color: blue;
     }
 }

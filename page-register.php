@@ -80,7 +80,8 @@ get_header();
                       </div>
                     </div>
   
-                      
+                    <?php do_action('register_form'); ?>
+                    
                     <input type="submit" value="Zarejestruj się" class="btn btn-primary w-100" id="register" />
   
                                              

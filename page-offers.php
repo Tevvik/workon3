@@ -40,7 +40,7 @@ $query = new WP_Query([
     's'=>$searched,
     'post_type'=>'offers',
     'post_status'=>'publish',
-    'meta_query'=>$acf_criteria,
+    //'meta_query'=>$acf_criteria,
     'orderby'=>$order,
     'tax_query'=> $category,
     'posts_per_page' => 20,
@@ -52,7 +52,7 @@ $query = new WP_Query([
                     <?php while ($query->have_posts()):$query->the_post();?>
                         <a href="<?php the_permalink()?>" class="single-offer">
                             <span class="offer-title"><?=get_the_title()?></span>
-                            <div class="offer-pic" style="background-image: url(<?=get_field('picture')?>)"></div>
+                            <img class="offer-pic" src="<?=get_field('picture')?>">
                             <div class="desc">
                                 <span class="price"><?=get_field('price')?>zł</span>
                                 <span class="size">rozm. <?=get_field('size')?></span>

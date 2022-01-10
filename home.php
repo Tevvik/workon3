@@ -51,7 +51,7 @@ $ico_m_5=$path.'photo\bluzka_i_tshirt-m.png';
     $query = new WP_Query([
         'post_type'=>'offers',
         'post_status'=>'publish',
-        'posts_per_page' => 2,
+        'posts_per_page' => 4,
         'orderby'=>[
             'date'=>'DESC'
         ],
@@ -64,7 +64,7 @@ $ico_m_5=$path.'photo\bluzka_i_tshirt-m.png';
                     <?php while ($query->have_posts()):$query->the_post();?>
                         <a href="<?php the_permalink()?>" class="single-offer">
                             <span class="offer-title"><?=get_the_title()?></span>
-                            <div class="offer-pic" style="background-image: url(<?=get_field('picture')?>)"></div>
+                            <img class="offer-pic" src="<?=get_field('picture')?>">
                             <div class="desc">
                                 <span class="price"><?=get_field('price')?>zł</span>
                                 <span class="size">rozm. <?=get_field('size')?></span>

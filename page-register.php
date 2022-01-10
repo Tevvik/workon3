@@ -7,12 +7,9 @@ $login = isset($_POST['user_login']) ? $_POST['user_login'] : '';
 $email = isset($_POST['user_email']) ? $_POST['user_email'] : '';
 $pass1 = isset($_POST['pass1']) ? $_POST['pass1'] : '';
 $pass2 = isset($_POST['pass2']) ? $_POST['pass2'] : '';
-$phone = isset($_POST['phone']) ? $_POST['phone'] : '';
 
-
-
-if ($login && $email && $pass1 && $pass1 === $pass2 && $phone) {
-    $user_id = wp_create_user($login, $pass1, $email, $phone);
+if ($login && $email && $pass1 && $pass1 === $pass2) {
+    $user_id = wp_create_user($login, $pass1, $email);
 
     if ($user_id) wp_redirect(get_the_permalink(704));
 }
@@ -40,6 +37,7 @@ get_header();
   
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Rejestracja</p>
                 <?php if (!is_user_logged_in()) : ?>
+                  <form action="<?php echo get_permalink(get_the_ID())?>" method="post">
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                       <div class="form-outline flex-fill mb-0">
@@ -71,12 +69,6 @@ get_header();
                         
                       </div>
                     </div>
-
-                    <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-phone fa-lg me-3 fa-fw"></i>
-                      <div class="form-outline flex-fill mb-0">
-                      <input type="number" name="phone" placeholder="Numer telefonu" id="phone" class="form-control mb-3" />
-                        
                       </div>
                     </div>
   

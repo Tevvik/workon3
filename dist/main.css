@@ -281,12 +281,12 @@ footer a {
     box-shadow: 0 0 1rem darkgray;
   }
 }
-input[type=checkbox] {
+input[type=checkbox],
+input[type=radio] {
   display: none;
 }
 
 input[type=checkbox] + label::before {
-  content: "\f584";
   padding-right: 1rem;
 }
 
@@ -322,9 +322,16 @@ header .navigation-items {
   display: flex;
   justify-content: flex-end;
 }
+header .navigation-items form {
+  display: flex;
+}
+header .navigation-items form input, header .navigation-items form label {
+  display: none;
+}
 header .options {
   padding: 0.5rem 1rem;
-  display: flex;
+  display: none;
+  z-index: 100;
   flex-direction: column;
   border-radius: 1rem;
   box-shadow: 0 0 1rem darkgray;
@@ -340,6 +347,9 @@ header .options-header {
   flex-direction: row;
   justify-content: space-between;
 }
+header .options-submit {
+  display: none;
+}
 header .options #category-select {
   display: flex;
 }
@@ -348,7 +358,7 @@ header .options #category-select--main, header .options #category-select--sub {
   flex-direction: column;
 }
 header .options #filters {
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 header .options #filters-header {
@@ -361,8 +371,8 @@ header .options #filters-header a::after {
 header .options #filters-select {
   display: flex;
 }
-header .options #filters-select > form {
-  display: flex;
+header .options #filters-select > div {
+  display: none;
   flex-direction: column;
 }
 header .options #filters-select--price {
@@ -381,11 +391,19 @@ header .options #filters-select--price .pair input[name=min], header .options #f
   header {
     display: flex;
     flex-direction: column;
+    position: relative;
   }
   header .navigation {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+  header .navigation a, header .navigation label, header .navigation input[type=text] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
   }
   header .navigation .logo {
     display: inline-block;
@@ -395,23 +413,28 @@ header .options #filters-select--price .pair input[name=min], header .options #f
   header .navigation-items {
     display: flex;
     flex-direction: row-reverse;
-    align-items: flex-end;
-    height: 3rem;
-  }
-  header .navigation-items a {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    height: 3rem;
+    gap: 1rem;
+  }
+  header .navigation-items form {
+    display: flex;
+    box-shadow: 0 0 0.5rem darkgray;
+  }
+  header .navigation-items form label {
+    display: block;
   }
   header .options {
     flex-direction: row;
     align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 25%;
     width: 50%;
+    background-color: white;
   }
   header .options-searchbar {
     display: none;
-    justify-content: space-between;
-    width: auto;
   }
   header .options a {
     width: 100%;

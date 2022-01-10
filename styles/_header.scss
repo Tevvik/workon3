@@ -1,9 +1,10 @@
-input[type=checkbox]{
-    //display: none;
+input[type=checkbox],
+input[type=radio]{
+    display: none;
 }
 input[type=checkbox]+label{
     &::before{
-        content: '\f584';
+        //content: '\f0c8';
         padding-right: 1rem;
     }
 }
@@ -34,11 +35,18 @@ header{
         &-items{
             display: flex;
             justify-content: flex-end;
+            form{
+                display: flex;
+                input,label{
+                    display: none;
+                }
+            }
         }
     }
     .options{
         padding: 0.5rem 1rem;
-        display: flex;
+        display: none;
+        z-index: 100;
         flex-direction: column;
         border-radius: 1rem;
         box-shadow: 0 0 1rem darkgray;
@@ -53,6 +61,9 @@ header{
             flex-direction: row;
             justify-content: space-between;
         }
+        &-submit{
+            display: none;
+        }
         #category-select{
             display: flex;
             &--main,
@@ -62,7 +73,7 @@ header{
             }
         }
         #filters{
-            display: flex;
+            display: none;
             flex-direction: column;
             &-header{
                 display: flex;
@@ -74,7 +85,7 @@ header{
             &-select{
                 display: flex;
                 >div{
-                    display: flex;
+                    display: none;
                     flex-direction: column;
                 }
                 &--price{
@@ -96,10 +107,18 @@ header{
     header{
         display: flex;
         flex-direction: column;
+        position: relative;
         .navigation{
             width: 100%;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            a,label,input[type=text]{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0;
+            }
             .logo{
                 display: inline-block;
                 height: 10vh;
@@ -108,23 +127,28 @@ header{
             &-items{
                 display: flex;
                 flex-direction: row-reverse;
-                align-items: flex-end;
+                align-items: center;
                 height: 3rem;
-                a{
+                gap: 1rem;
+                form{
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    box-shadow: 0 0 0.5rem darkgray;
+                    label{
+                        display: block;
+                    }
                 }
             }
         }
         .options{
             flex-direction: row;
             align-items: flex-start;
+            position: absolute;
+            top: 100%;
+            left: 25%;
             width: 50%;
+            background-color: $options_bgcolor;
             &-searchbar{
                 display: none;
-                justify-content: space-between;
-                width: auto;
             }
             a{
                 width: 100%;

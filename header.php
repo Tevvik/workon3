@@ -57,7 +57,7 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                                 </div>
                                 <div id="category-select">
                                         <div class="category-select--main">
-                                                <?php/* DYNAMICZNE WYŚWIETLANIE KATEGORII OFERT*/ ?>
+                                                
                                                 <?php foreach (get_terms(['taxonomy'=>'offers','hide_empty' => false,'fields'=>'names','parent'=>'0']) as $taxonomy) :?>
                                                         <input type="checkbox" name="category" id="<?=$taxonomy?>">
                                                         <label for="$taxonomy"><?=$taxonomy?></label>
@@ -68,31 +68,46 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                                                 <label for="Wszystkie">
                                                         Wszystkie
                                                 </label>
-                                                <?php/* NIE DZIAŁA!!! DYNAMICZNE WYŚWIETLANIE PODKATEGORII OFERT*/ ?>
+                                                
                                                 <?php foreach (get_terms(['taxonomy'=>'offers','parent' => 'k', 'hide_empty' => false,'fields'=>'names']) as $taxonomy) :?>
                                                         <label for="$taxonomy"><?=$taxonomy?><input type="checkbox" name="category" id="<?=$taxonomy?>"></label>
                                                 <?php endforeach;?>
                                         </div>
                                 </div>
                                 <div id="filters">
-                                        <?php
-                                        /* DYNAMICZNE WYŚWIETLANIE FILTRÓW
-                                        POZA CENA, CENA JEST SPECJALNA*/ 
-                                        ?>
+                                        
                                         <div id="filters-header">
                                                 <a id="price">Cena</a>
                                                 <?php foreach ($filters as $filter): $filter=$filter['name']?>
                                                         <a id="<?=$filter?>" onclick="bruh(event)"><?=$filter?></a>
                                                 <?php endforeach;?>    
                                         </div>
-                                        <div id="filters-select">
-                                                <div class="filters-select--price">
-                                                        <div class="pair">
-                                                                <input type="number" name="min" vaule="1" placeholder="Od">
-                                                                <span> - </span>
-                                                                <input type="number" name="max" value="100" placeholder="do">
-                                                        </div>
-                                                </div>
+        <div id="filters-select">
+
+                <div class="filters-select--price">
+                <div class="price-input">
+                      <div class="field">
+                        <span>Min</span>
+                        <input type="number" class="input-min" value="2500">
+                </div>
+                <div class="separator">-</div>
+                <div class="field">
+                <span>Max</span>
+                <input type="number" class="input-max" value="7500">
+                </div>
+        </div>
+      <div class="slider">
+        <div class="progress"></div>
+      </div>
+      <div class="range-input">
+        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+        <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+      </div>
+    </div>
+                       
+                        
+                      
+                        
                                                 <?php foreach ($filters as $filter): $filter?>
                                                         <div id="filters-select--<?=$filter['name']?>">
                                                                 <a id="<?=$filter['name']?>"><?=$filter['name']?></a>
@@ -125,3 +140,9 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                                 document.getElementById('filters').style.display == 'none' ? document.getElementById('filters').style.display = 'flex' : document.getElementById('filters').style.display = 'none';
                         }
                 </script>
+
+<script src="slider.js"></script>
+
+
+
+                

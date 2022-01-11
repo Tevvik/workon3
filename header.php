@@ -60,6 +60,10 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                                 </div>
                                 <div id="category-select">
                                         <div class="category-select--main">
+<<<<<<< HEAD
+                                                
+=======
+>>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
                                                 <?php foreach (get_terms(['taxonomy'=>'offers','hide_empty' => false,'fields'=>'names','parent'=>'0']) as $taxonomy) :?>
                                                         <a><?=$taxonomy?></a>
                                                 <?php endforeach;?>
@@ -69,19 +73,57 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                                                 <label for="Wszystkie">
                                                         Wszystkie
                                                 </label>
+<<<<<<< HEAD
+                                                
+                                                <?php foreach (get_terms(['taxonomy'=>'offers','parent' => 'k', 'hide_empty' => false,'fields'=>'names']) as $taxonomy) :?>
+                                                        <label for="$taxonomy"><?=$taxonomy?><input type="checkbox" name="category" id="<?=$taxonomy?>"></label>
+=======
                                                 <?php foreach (get_terms(['taxonomy'=>'offers','hide_empty' => false,'fields'=>'names','parent'=>'55']) as $taxonomy) :?>
                                                         <input type="radio" name="category" id="<?=$taxonomy?>" value="<?=$taxonomy?>">
                                                         <label for="<?=$taxonomy?>"><?=$taxonomy?></label>
+>>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
                                                 <?php endforeach;?>
                                         </div>
                                 </div>
                                 <div id="filters">
+<<<<<<< HEAD
+                                        
+=======
+>>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
                                         <div id="filters-header">
                                                 <a id="price" onclick="visibilityToggle(event, 'filters-select--price')">Cena</a>
                                                 <?php foreach ($filters as $filter): $filter=$filter['name']?>
                                                         <a id="<?=$filter?>" onclick="visibilityToggle(event, 'filters-select--<?=$filter?>')"><?=$filter?></a>
                                                 <?php endforeach;?>    
                                         </div>
+<<<<<<< HEAD
+        <div id="filters-select">
+
+                <div class="filters-select--price">
+                <div class="price-input">
+                      <div class="field">
+                        <span>Min</span>
+                        <input type="number" class="input-min" value="2500">
+                </div>
+                <div class="separator">-</div>
+                <div class="field">
+                <span>Max</span>
+                <input type="number" class="input-max" value="7500">
+                </div>
+        </div>
+      <div class="slider">
+        <div class="progress"></div>
+      </div>
+      <div class="range-input">
+        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+        <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+      </div>
+    </div>
+                       
+                        
+                      
+                        
+=======
                                         <div id="filters-select">
                                                 <div id="filters-select--price">
                                                         <div class="pair">
@@ -90,6 +132,7 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                                                                 <input type="number" name="max" value="100" placeholder="do">
                                                         </div>
                                                 </div>
+>>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
                                                 <?php foreach ($filters as $filter): $filter?>
                                                         <div id="filters-select--<?=$filter['name']?>">
                                                                 <a id="<?=$filter['name']?>"><?=$filter['name']?></a>
@@ -115,3 +158,9 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                                 document.getElementById(id).style.display == 'none' ? document.getElementById(id).style.display = 'flex' : document.getElementById(id).style.display = 'none';
                         }
                 </script>
+
+<script src="slider.js"></script>
+
+
+
+                

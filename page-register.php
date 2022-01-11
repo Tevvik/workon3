@@ -15,6 +15,31 @@ if ($login && $email && $pass1 && $pass1 === $pass2) {
 }
 get_header();
 ?>
+<<<<<<< HEAD
+<main class="main">
+      <div class="rejestracja">
+        <div class="title">Rejestracja</div>
+        <div class="contentR">
+        <?php if (!is_user_logged_in()) : ?>
+          <form action="<?php echo get_permalink(get_the_ID())?>" method="post">
+            <div class="user-detailsR">
+              <div class="input-box">
+                <div class="input-box3">
+                <input type="text" name="user_login" placeholder="Login" id="user_login"/>
+                <i class="fa fa-user fa-lg"></i>
+              </div>
+                <div class="input-box4">
+                <input type="text" name="user_email" placeholder="E-Mail" id="user_email" />
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+              </div>
+              <div class="input-box5">
+              <input type="password" name="pass1" placeholder="Hasło" id="pass1"/>
+              <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+              </div>
+              <div class="input-box6">
+              <input type="password" name="pass2" placeholder="Powtórz hasło" id="pass2"/>
+                <i class="fa fa-key fa-lg"></i>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,21 +112,21 @@ get_header();
                   <img src="https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?cs=srgb&dl=pexels-kai-pilger-996329.jpg&fm=jpg" class="img-fluid" alt="Sample image">
   
                 </div>
+>>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
               </div>
             </div>
-          </div>
+                <div class="buttonll">
+                <input type="submit" value="Zarejestruj się" id="register" />
+            </div>
+          </form>
+          <?php else : ?>
+                    Jesteś zalogowany
+                <?php endif; ?>
         </div>
       </div>
-    </div>
-  </section>
 
 
-
-
-
-</body>
-</html>
+    </main>
 
 
 <?php get_footer(); ?>
-

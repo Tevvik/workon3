@@ -28,7 +28,7 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                 <?php wp_head();?>
         </head>
         <body>
-                <header>
+                <header onclick="sticky()">
                         <nav class="navigation">
                                 <a class="logo" href="<?=get_home_url()?>"><?=$logo?>LOGO</a>
                                 <div class="navigation-items">

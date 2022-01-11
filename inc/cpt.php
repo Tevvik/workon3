@@ -48,5 +48,15 @@ function add_cpt() {
         'supports' => ['title']  
     ];
     register_post_type('offers', $offerArgs);
+
+    $talksArgs=[
+        'labels' => [
+            'name' => 'Rozmowy'
+        ],
+        'public' => true,
+        'menu_icon' => 'dashicons-list-view',
+        'supports' => ['title', 'comments']  
+    ];
+    register_post_type('talks', $talksArgs);
 }
 add_action('init', 'add_cpt');

@@ -281,29 +281,26 @@ footer a {
     box-shadow: 0 0 1rem darkgray;
   }
 }
-input[type=checkbox],
-input[type=radio] {
-  display: none;
-}
-
-input[type=checkbox] + label::before {
-  padding-right: 1rem;
-}
-
-input[type=text] {
-  margin: 0;
-  border: none;
-}
-
-input[type=submit],
-input[type=reset] {
-  display: none;
-}
-
 header {
+  position: sticky;
   margin: 0;
   display: flex;
   flex-direction: column;
+}
+header input[type=checkbox],
+header input[type=radio] {
+  display: none;
+}
+header input[type=checkbox] + label::before {
+  padding-right: 1rem;
+}
+header input[type=text] {
+  margin: 0;
+  border: none;
+}
+header input[type=submit],
+header input[type=reset] {
+  display: none;
 }
 header a, header label {
   display: flex;
@@ -391,7 +388,6 @@ header .options #filters-select--price .pair input[name=min], header .options #f
   header {
     display: flex;
     flex-direction: column;
-    position: relative;
   }
   header .navigation {
     width: 100%;

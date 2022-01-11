@@ -281,50 +281,16 @@ footer a {
     box-shadow: 0 0 1rem darkgray;
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-input[type=checkbox],
-input[type=radio] {
-  display: none;
-}
-
-input[type=checkbox] + label::before {
-  padding-right: 1rem;
-}
-
-input[type=text] {
-  margin: 0;
-  border: none;
-}
-
-input[type=submit],
-input[type=reset] {
-  display: none;
-}
-
->>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
->>>>>>> 38432aaea094fe70cb921ca3852e84ca3ed97620
 header {
-  position: sticky;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
-<<<<<<< HEAD
-header input[type=checkbox],
-header input[type=radio] {
-  display: none;
-}
-header input[type=checkbox] + label::before {
-=======
 header input[type=checkbox] {
   display: none;
 }
 header input[type=checkbox] + label::before {
   content: "\f0c8";
->>>>>>> 38432aaea094fe70cb921ca3852e84ca3ed97620
   padding-right: 1rem;
 }
 header input[type=text] {
@@ -402,11 +368,7 @@ header .options #filters-select {
   display: flex;
 }
 header .options #filters-select > div {
-<<<<<<< HEAD
-  display: flex;
-=======
   display: none;
->>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
   flex-direction: column;
 }
 header .options #filters-select--price {

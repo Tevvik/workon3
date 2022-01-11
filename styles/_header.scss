@@ -1,42 +1,10 @@
-<<<<<<< HEAD
-header{
-    position: sticky;
-    input[type=checkbox],
-    input[type=radio]{
-=======
-<<<<<<< HEAD
-=======
-input[type=checkbox],
-input[type=radio]{
-    display: none;
-}
-input[type=checkbox]+label{
-    &::before{
-        //content: '\f0c8';
-        padding-right: 1rem;
-    }
-}
-input[type=text]{
-    margin: 0;
-    border: none;
-}
-input[type=submit],
-input[type=reset]{
-    display: none;
-}
->>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
 header{
     input[type=checkbox]{
->>>>>>> 38432aaea094fe70cb921ca3852e84ca3ed97620
         display: none;
     }
     input[type=checkbox]+label{
         &::before{
-<<<<<<< HEAD
-            //content: '\f0c8';
-=======
             content: '\f0c8';
->>>>>>> 38432aaea094fe70cb921ca3852e84ca3ed97620
             padding-right: 1rem;
         }
     }

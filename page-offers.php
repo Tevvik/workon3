@@ -15,32 +15,28 @@ if(isset($_GET['category'])){
 else{
     $category=null;
 }
-$price_min = (isset($_GET['min'])) ? $_GET['min'] : 0;
-//DO ZROBIENIA ZEBY POBIERALO NAJWIEKSZA CENE JAKA JEST
-$price_max = (isset($_GET['min'])) ? $_GET['min'] : 1000;
 $searched= (isset($_GET['search'])) ? $_GET['search'] : '';
-$acf_criteria=[
-    'relation'=>'AND',
-    [
-    'key'=>'price',
-    'value'=>$price_max,
-    'compare'=>'<=',
-    'type'=>'NUMERIC'
-    ],
-    [
-    'key'=>'price',
-    'value'=>$price_min,
-    'compare'=>'>=',
-    'type'=>'NUMERIC'
-    ],
-    'by_price'=>['key'=>'price'],
-];
 $order = (isset($_GET['order'])) ? $_GET['order'] : ['date'=>'DESC'];
 $query = new WP_Query([
     's'=>$searched,
     'post_type'=>'offers',
     'post_status'=>'publish',
-    //'meta_query'=>$acf_criteria,
+    'meta_query'=>[
+        'relation'=>'AND',
+        [
+        'key'=>'price',
+        'value'=>(isset($_GET['max'])) ? $_GET['max'] : 100,
+        'compare'=>'<=',
+        'type'=>'NUMERIC'
+        ],
+        [
+        'key'=>'price',
+        'value'=>(isset($_GET['min'])) ? $_GET['min'] : 0,
+        'compare'=>'>=',
+        'type'=>'NUMERIC'
+        ],
+        'by_price'=>['key'=>'price'],
+    ],
     'orderby'=>$order,
     'tax_query'=> $category,
     'posts_per_page' => 20,

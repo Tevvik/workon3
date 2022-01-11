@@ -32,15 +32,18 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                         <nav class="navigation">
                                 <a class="logo" href="<?=get_home_url()?>"><?=$logo?>LOGO</a>
                                 <div class="navigation-items">
-                                        <a href="<?=get_template_directory_uri()?>/login/"><?=$user_ico?></a></a>
-                                        <a href="">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16"><path fill-rdive="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/></svg>
-                                        </a>
-                                        <a href="#" class="search-button " role="button"><?=$search_ico?></a>
+                                        <a href="<?=get_template_directory_uri()?>/login/">U</a></a>
+                                        <a>A</a>
+                                        <form action="<?= get_template_directory_uri()?>/oferty">
+                                                <input type="text" name="search" placeholder="Czego praginiesz?">
+                                                <input type=submit id="send">
+                                                <label for="send">S</label>
+                                                <a onclick="visibilityToggle(event, 'options')">></a>
+                                        </form>
                                 </div>
                         </nav>
-                        <form class="options" action="<?= get_template_directory_uri()?>/oferty">
-                                <div class="options-searchbar" method="GET" >
+                        <form class="options" id="options" action="<?= get_template_directory_uri()?>/oferty">
+                                <div class="options-searchbar" method="GET">
                                         <input type=submit id="send">
                                         <label for="send">
                                                 <?=$search_ico?>
@@ -51,37 +54,49 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                                         <a class="button-to-collapse-searchbar">X</a>
                                 </div>
                                 <div class="options-header">
-                                        <a onclick="categoriesToggle()">Kategorie</a>
-                                        <a onclick="filtersToggle()">Filtry X</a>
-                                        <a>X Sortuj</a>
+                                        <a onclick="visibilityToggle(event, 'category-select')">Kategorie</a>
+                                        <a onclick="visibilityToggle(event, 'filters')">Filtry X</a>
+                                        <a onclick="visibilityToggle(event, 'sort')">X Sortuj</a>
                                 </div>
                                 <div id="category-select">
                                         <div class="category-select--main">
+<<<<<<< HEAD
                                                 
+=======
+>>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
                                                 <?php foreach (get_terms(['taxonomy'=>'offers','hide_empty' => false,'fields'=>'names','parent'=>'0']) as $taxonomy) :?>
-                                                        <input type="checkbox" name="category" id="<?=$taxonomy?>">
-                                                        <label for="$taxonomy"><?=$taxonomy?></label>
+                                                        <a><?=$taxonomy?></a>
                                                 <?php endforeach;?>
                                         </div>
                                         <div class="category-select--sub">
-                                                <input type="checkbox" name="category" id="Wszystkie">
+                                                <input type="radio" name="category" id="Wszystkie">
                                                 <label for="Wszystkie">
                                                         Wszystkie
                                                 </label>
+<<<<<<< HEAD
                                                 
                                                 <?php foreach (get_terms(['taxonomy'=>'offers','parent' => 'k', 'hide_empty' => false,'fields'=>'names']) as $taxonomy) :?>
                                                         <label for="$taxonomy"><?=$taxonomy?><input type="checkbox" name="category" id="<?=$taxonomy?>"></label>
+=======
+                                                <?php foreach (get_terms(['taxonomy'=>'offers','hide_empty' => false,'fields'=>'names','parent'=>'55']) as $taxonomy) :?>
+                                                        <input type="radio" name="category" id="<?=$taxonomy?>" value="<?=$taxonomy?>">
+                                                        <label for="<?=$taxonomy?>"><?=$taxonomy?></label>
+>>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
                                                 <?php endforeach;?>
                                         </div>
                                 </div>
                                 <div id="filters">
+<<<<<<< HEAD
                                         
+=======
+>>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
                                         <div id="filters-header">
-                                                <a id="price">Cena</a>
+                                                <a id="price" onclick="visibilityToggle(event, 'filters-select--price')">Cena</a>
                                                 <?php foreach ($filters as $filter): $filter=$filter['name']?>
-                                                        <a id="<?=$filter?>" onclick="bruh(event)"><?=$filter?></a>
+                                                        <a id="<?=$filter?>" onclick="visibilityToggle(event, 'filters-select--<?=$filter?>')"><?=$filter?></a>
                                                 <?php endforeach;?>    
                                         </div>
+<<<<<<< HEAD
         <div id="filters-select">
 
                 <div class="filters-select--price">
@@ -108,11 +123,21 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                         
                       
                         
+=======
+                                        <div id="filters-select">
+                                                <div id="filters-select--price">
+                                                        <div class="pair">
+                                                                <input type="number" name="min" vaule="1" placeholder="Od">
+                                                                <span> - </span>
+                                                                <input type="number" name="max" value="100" placeholder="do">
+                                                        </div>
+                                                </div>
+>>>>>>> 7c42d249adb6333dff6c0815fbc1131299dac274
                                                 <?php foreach ($filters as $filter): $filter?>
                                                         <div id="filters-select--<?=$filter['name']?>">
                                                                 <a id="<?=$filter['name']?>"><?=$filter['name']?></a>
                                                                 <?php foreach ($filter['positions'] as $position):?>
-                                                                        <input type="checkbox" name="<?=$position?>" id="<?=$position?>">
+                                                                        <input type="checkbox" name="<?=$filter["name"]?>[]" id="<?=$position?>" value="<?=$position?>">
                                                                         <label for="<?=$position?>"><?=$position?></label>
                                                                 <?php endforeach;?>
                                                         </div>
@@ -128,16 +153,9 @@ foreach(get_taxonomies(['desc'=>'filters'], 'objects') as $filter){
                         </form>
                 </header>
                 <script>
-                        function bruh(e){
-                                var display = document.getElementById('filters-select--'+e.target.id).style.display;
-                                display == 'none' ? display = 'flex' : display = 'none';
-                                document.getElementById('filters-select--'+e.target.id).style.display = display;
-                        }
-                        function categoriesToggle(e){
-                                document.getElementById('category-select').style.display == 'none' ? document.getElementById('category-select').style.display = 'flex' : document.getElementById('category-select').style.display = 'none';
-                        }
-                        function filtersToggle(e){
-                                document.getElementById('filters').style.display == 'none' ? document.getElementById('filters').style.display = 'flex' : document.getElementById('filters').style.display = 'none';
+                        function visibilityToggle(e, id){
+                                console.log(id);
+                                document.getElementById(id).style.display == 'none' ? document.getElementById(id).style.display = 'flex' : document.getElementById(id).style.display = 'none';
                         }
                 </script>
 

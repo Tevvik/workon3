@@ -4,80 +4,108 @@ Template name: Strona główna
 */
 get_header();
 $slogan='Nie nosisz? Więc sprzedaj!';
-$path=get_template_directory_uri().'\\';
-$ico_w_1=$path.'photo\kurtka-m.png';
-$ico_w_2=$path.'photo\buty-k.png';
-$ico_w_3=$path.'photo\akcesoria-w.png';
-$ico_w_4=$path.'photo\bluzy_i_swetry-k.png';
-$ico_w_5=$path.'photo\bluzka_i_tshirt-k.png';
-$ico_m_1=$path.'photo\kurtka-k.png';
-$ico_m_2=$path.'photo\buty-m.png';
-$ico_m_3=$path.'photo\akcesoria-m.png';
-$ico_m_4=$path.'photo\bluzy_i_swetry-m.png';
-$ico_m_5=$path.'photo\bluzka_i_tshirt-m.png';
 ?>
 <div class="hero">
     <div class="background">
     </div>
-    <div class="slogan">
-        <h1><?=$slogan?></h1>
-        <div class="slogan-buttons">
-            <a href="">Sprzedaj teraz</a>
-            <a href="">O nas</a>
-        </div>
-    </div>
+    <form class="big-search" action="<?= get_template_directory_uri()?>/oferty">
+        <input type="text" name="search" placeholder="Czego pragniesz?">
+        <input type="submit" value="Szukaj">
+    </form>
 </div>
 <div class="categories">
     <h3>Kategorie</h3>
-        <div class="women">
-            <h4>Kobiety</h4>
-                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_1?>">Płaszcze i kurtki</a>
-                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_2?>">Buty</a>
-                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_3?>">Akcesoria</a>
-                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_4?>">Bluzy i swetry</a>
-                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_5?>">Bluzki i T-shirty</a>
+    <?php foreach (get_terms(['taxonomy'=>'offers','hide_empty' => false,'fields'=>'all','parent'=>'0']) as $category) :?>
+        <div class="category-container">
+            <h4><?=$category->name?></h4>
+            <?php foreach (get_terms(['taxonomy'=>'offers','hide_empty' => false,'fields'=>'all','parent'=>$category->term_id]) as $subcat) :?>
+                <a class="category" href="<?=get_template_directory_uri()?>/oferty/?category[0]=<?=$subcat->term_id?>">
+                    <img src="<?=get_template_directory_uri()?>/images/x<?=$subcat->term_id?>.PNG" alt="<?=$subcat->name?>">
+                    <span><?=$subcat->name?></span> 
+                </a>
+            <?php endforeach;?>
         </div>
-        <div class="men">
-            <h4>Mężczyźni</h4>
-                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_1?>">Płaszcze i kurtki</a>
-                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_2?>">Buty</a>
-                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_3?>">Akcesoria</a>
-                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_4?>">Bluzy i swetry</a>
-                <a href="#"class="d-flex flex-column"><img src="<?=$ico_w_5?>">Bluzki i T-shirty</a>
-        </div>
-    </div>
+    <?php endforeach;?>
 </div>
 <?php
     $query = new WP_Query([
         'post_type'=>'offers',
         'post_status'=>'publish',
-        'posts_per_page' => 4,
+        'posts_per_page' => 5,
         'orderby'=>[
             'date'=>'DESC'
         ],
     ]);
 ?>
-<?php if( $query->have_posts() ) : ?>
+<section class="center">
+    <?php if( $query->have_posts() ) : ?>
     <div class="extra">
-        <h2>Wyróżnione</h2>
-                <div class="offer-container">
+        <h2>Najnowsze</h2>
+                <div class="offer-container autoplay">
                     <?php while ($query->have_posts()):$query->the_post();?>
-                        <a href="<?php the_permalink()?>" class="single-offer">
+                        <div>
+                        <a href="<?php the_permalink()?>" class="single-offer" style="width:90%">
                             <span class="offer-title"><?=get_the_title()?></span>
-                            <img class="offer-pic" src="<?=get_field('picture')?>">
+                            <img class="offer-pic" src="<?=get_field('thumbnail')?>">
                             <div class="desc">
                                 <span class="price"><?=get_field('price')?>zł</span>
-                                <span class="size">rozm. <?=get_field('size')?></span>
+                                
                                 <div class="">
                                     <span class="date"><?=get_the_date('d.m.Y')?></span>
                                     <span class="author"><?=get_the_author()?></span>
                                 </div>
                             </div>
                         </a>
+                        </div>
                     <?php endwhile;?>
                 </div>
     </div>
 <?php else : ?>
 <?php endif;?>
-<?php include 'footer.php';?>
+</section>
 <?php get_footer(); ?>
+<script>
+    (function($){
+   $( document ).ready(function() {
+        $('.autoplay').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 4,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                breakpoint: 1200,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+                },
+                {
+                breakpoint: 1000,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 2
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+                }
+            ]
+            });
+   })
+})(jQuery);
+</script>

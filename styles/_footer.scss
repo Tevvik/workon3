@@ -1,25 +1,55 @@
 footer{
+    clear: both;
     display: flex;
     flex-direction: column;
-    background-color: darkgray;
-    padding: 2rem;
-    >a{
-        text-align: center;
-    }
+    background-color: $text-c;
+    color: $primary;
+    
     .social{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+        a{
+            padding: .75rem 1rem;
+        }
+        i{
+            font-size: 2rem;
+        }
     }
     div{
         display: flex;
         flex-direction: column;
-        padding: 0 0 1rem 0;
+        flex: 1;
+        padding: 0.5rem;
     }
     a{
         text-decoration: none;
-        color: black;
-        padding: 1rem 0;
+        padding: 0.75rem;
+        margin: 0.5rem;
+        border-radius: $radius;
+        &:hover{
+            color: $text-c;
+            background-color: $primary;
+        }
+    }
+    .email-ico, .phone-ico, .user-ico{
+        display: flex;
+        &::before{
+            display: flex;
+            align-items: center;
+            padding-right: 1rem;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-style: normal;
+        }
+    }
+    .email-ico::before{
+        content: "\f0e0";
+    }
+    .phone-ico::before{
+        content: "\f095";
     }
 
 }
@@ -32,7 +62,15 @@ footer{
         .end{
             width: 100%;
             margin: 0;
-            padding: 0;
+            padding: 0.5rem;
+        }
+        .social{
+            flex: 0.5;
+
+        }
+        div{
+            
+            align-items: flex-start;
         }
     }
 }

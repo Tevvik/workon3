@@ -1,60 +1,84 @@
 .offers-single{
-    padding: 0 1rem;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    background-color: $primary;
     .gallery{
-        display: flex;
-        justify-content: center;
-        flex-basis: 100%;
-        background-color: darkgrey;
+        background-color: $secondary;
+        height: 65vh;
         img{
             max-width: 100%;
-            max-height: 70vh;
+            max-height: 80vh;
+            object-fit: contain;
         }
     }
     .info{
-        flex-basis: 100%;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
         box-sizing: border-box;
         padding: 1.5rem;
-        background-color: lightgray;
-        div{
-            position: sticky;
-        }
+        gap: 1rem;
+        background-color: $primary;
         h2{
             font-size: 1.5em;
             padding: 0;
             margin: 1rem 0;
         }
         .price{
-            color: darkorange;
             font-size: 2rem;
+            font-weight: bold;
             &::after{
                 content: 'zł';
             }
         }
+        span{
+            font-size: 1rem;
+        }
         a{
+            font-size: 1.1rem;
             text-decoration: none;
-            display: block;
-            padding: 1rem 0;
+            padding: 1rem;
+            border-radius: $radius;
+            &:hover{
+                color: $primary;
+                background-color: $text-c;
+            }
+            &:not(:first-of-type){
+                margin-left: 1rem;
+            }
         }
-        .date{
-            font-size: 1.2rem;
-            color: darkslategrey;
+        .email-ico, .phone-ico, .user-ico{
+            display: flex;
+            align-items: center;
+            &::before{
+                padding-right: 2rem;
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                font-style: normal;
+            }
         }
-        .username{
-            font-size: 1.3rem;
-            
+        .email-ico::before{
+            content: "\f0e0";
         }
-        .info-user{
-            margin: 1.5rem 0 0 0;
+        .phone-ico::before{
+            content: "\f095";
+        }
+        .user-ico::before{
+            content: "\f007";
         }
     }
 }
 @media (min-width: 1000px){
     .offers-single{
-        flex-direction: row; 
-    .info .gallery{
-        flex-basis: 50%;
+        flex-direction: row;
+        .gallery{
+            flex: 1;
+            width: 50%;
+            height: auto;
         }
-    }   
+        .info {
+            flex: 1;
+        }
+    }
 }

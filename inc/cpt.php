@@ -19,26 +19,6 @@ function add_cpt() {
     ];
     register_taxonomy('filter_sizes', ['offers'], $argsOffersFileterSizes);
 
-    $argsFilterStyles = [
-        'labels' => [
-            'name' => 'Style'
-        ],
-        'desc'=>'filters',
-        'public'=>true,
-        'hierarchical' => false
-    ];
-    register_taxonomy('filter_style', ['offers'], $argsFilterStyles);
-
-    $argsFilterBrand = [
-        'labels' => [
-            'name' => 'Marka'
-        ],
-        'desc'=>'filters',
-        'public'=>true,
-        'hierarchical' => false
-    ];
-    register_taxonomy('filter_brand', ['offers'], $argsFilterBrand);
-
     $offerArgs=[
         'labels' => [
             'name' => 'Oferty'
@@ -48,15 +28,5 @@ function add_cpt() {
         'supports' => ['title']  
     ];
     register_post_type('offers', $offerArgs);
-
-    $talksArgs=[
-        'labels' => [
-            'name' => 'Rozmowy'
-        ],
-        'public' => true,
-        'menu_icon' => 'dashicons-list-view',
-        'supports' => ['title', 'comments']  
-    ];
-    register_post_type('talks', $talksArgs);
 }
 add_action('init', 'add_cpt');

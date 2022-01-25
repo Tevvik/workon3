@@ -4,6 +4,7 @@
 .pagination{
     display: flex;
     justify-content: center;
+    width: 100% !important;
     a, span{
         display: block;
         background-color: lightgray;
@@ -12,19 +13,19 @@
 }
 .offer-container{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 1rem;
     width: 100%;
+    padding: 1rem;
     .single-offer{
         display: flex;
         flex-direction: column;
-        width: 45%;
+        width: calc(50% - 1rem/2);
         padding: 0.25rem;
-        margin: 1rem 0;
-        border-radius: 1vw;
+        border-radius: $radius;
         text-decoration: none;
-        background-color: lightgray;
+        background-color: $primary;
         .offer-pic{
             display: block;
             object-fit: contain;
@@ -58,9 +59,11 @@
 @media(min-width:1000px){
     .offer-container{
         .single-offer{
-            width: 22.5%;
+            min-width: 15rem;
+            width: calc(25% - 3rem / 4);
             .offer-pic{
-                height: 25vw;
+                min-height: 16rem;
+                height: calc((100vw - 20rem) / 4 - 3rem / 4);
             }
         }
     }

@@ -62,6 +62,7 @@ $query = new WP_Query([
         }
         .offer-container{
             width: calc(100% - 20rem);
+            max-width: 80%;
         }
         header,footer{
             width:100%;

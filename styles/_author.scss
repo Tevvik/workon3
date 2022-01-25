@@ -1,0 +1,57 @@
+.user-account--info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 5vh auto;
+    background-color: $primary;
+    border-radius: $radius;
+    padding: 1rem;
+    h2{
+        font-size: 1.3rem;
+        padding: 1rem;
+        width: 100%;
+    }
+    a,p{
+        font-size: 1.1rem;
+        text-decoration: none;
+        padding: 1rem;
+        border-radius: $radius;
+        &:hover:not(.user-ico){
+            color: $primary;
+            background-color: $text-c;
+        }
+        &:not(:first-of-type){
+            margin-left: 1rem;
+        }
+    }
+    .email-ico, .phone-ico, .user-ico{
+        display: flex;
+        align-items: center;
+        &::before{
+            padding-right: 2rem;
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-style: normal;
+        }
+    }
+    .email-ico::before{
+        content: "\f0e0";
+    }
+    .phone-ico::before{
+        content: "\f095";
+    }
+    .user-ico::before{
+        content: "\f007";
+    }
+
+}
+@media (min-width: 1000px){
+    .user-account--info{
+        width: 60%;
+        align-items: flex-start;
+    }
+    .account, h1,h2,h3{
+        width: 90%;
+        margin: auto;
+    }
+}
